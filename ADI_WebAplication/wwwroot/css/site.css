@@ -1,71 +1,352 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿/* Reset de Márgenes y Paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* General Layout */
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    margin: 0;
+    padding: 0;
+    /*background-color: #3C9CBA;*/ /* Fondo del Layout */
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    line-height: 1.6;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+
+/* Línea Superior */
+.top-line {
+    background: url('/img/linea.png') no-repeat center;
+    height: 20px;
+    width: 100%;
+}
+
+/* Header */
+header {
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem; /* Reducido desde 1rem a 0.7rem */
+    background: url('/img/Rectangle 9551.png') no-repeat center/cover;
+    flex-wrap: wrap;
+    position: relative; /* Necesario para posicionar el logo */
+    max-height: 150px; /* Altura máxima */
+}
+
+/* Logo */
+.logo {
+    max-height: 180px; /* Limita la altura máxima del logo */
+    width: auto;
+    flex-shrink: 0; /* Evita que el logo reduzca su tamaño al ajustar el contenedor */
+}
+
+/* Navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end; /* Alinea los enlaces a la derecha */
+    flex-wrap: wrap; /* Permite el ajuste en pantallas pequeñas */
+    flex-grow: 1; /* Asegura que ocupen espacio disponible */
+    margin-right: 1rem; /* Margen adicional para separación */
+}
+
+    .nav-links li {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+        .nav-links a:hover {
+            color: #0056b3;
+        }
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background: url('/img/Rectangle 9551.png') no-repeat center/cover;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 4rem;
+        font-weight: 900;
+        margin-bottom: 0; /* Sin margen entre los textos h2 */
+        line-height: 1; /* Ajusta el espacio entre líneas */
+    }
+
+        .hero-content h2.text-outline {
+            font-family: 'Lato', sans-serif; /* Cambiar tipografía */
+            font-weight: bold;
+            font-size: 5rem;
+            color: transparent; /* Hacer el texto transparente */
+            -webkit-text-stroke: 2px #fff; /* Solo bordes */
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+
+/* Hero Image Container */
+.hero-image {
+    position: relative;
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .hero-image img {
+        max-width: 110%;
+        height: auto;
+        border-radius: 10px;
+        z-index: 3;
+    }
+
+    .hero-image .ellipse {
+        position: absolute;
+        top: 10%;
+        left: 25%;
+        z-index: 1;
+        width: 60%;
+        height: auto;
+    }
+
+    .hero-image .icon {
+        position: absolute;
+        bottom: 13%;
+        left: 19%;
+        z-index: 4;
+        width: 5rem;
+        height: auto;
+    }
+
+    .hero-image .triangles {
+        position: absolute;
+        top: 0;
+        right: 8%;
+        z-index: 4;
+        width: 7rem;
+        height: auto;
+    }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #3C9CBA;
+    color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
+        .hero-content h2.text-outline {
+            font-size: 3rem; /* Ajusta el tamaño en pantallas medianas */
+        }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-height: 40px; /* Reduce el tamaño del logo en pantallas pequeñas */
+    }
+
+    .hero-content h1 {
+        font-size: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+        .hero-content h2.text-outline {
+            font-size: 1.2rem; /* Ajusta el tamaño en pantallas pequeñas */
+        }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-image .icon,
+    .hero-image .triangles {
+        width: 4rem;
+    }
+
+    .nav-links {
+        justify-content: center; /* Asegura que los enlaces no desaparezcan */
+    }
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 0; /* No margen superior */
+    margin-top: -1px; /* Evita separación visual con Hero */
+    background-color: #fff;
+}
+
+.about-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    max-height: calc(100%); /* Calcula altura relativa a Hero */
+    max-width: 72%; 
+    object-fit: cover; /* Mantiene proporciones sin deformar */
+    z-index: 2;
+}
+
+.about-text {
+    margin-left: 40%;
+    max-width: 50%; /* Ajusta el espacio del texto */
+    padding: 6rem; /* Reduce el padding para acercar texto a la imagen */
+    text-align: left;
+    z-index: 3;
+    position: relative;
+}
+
+    .about-text h2 {
+        font-size: 4rem;
+        font-weight: 900; /* Font-weight 900 para "¿QUÉ" */
+        line-height: 1;
+        color: #3C9CBA;
+        margin-bottom: 1rem;
+    }
+
+        .about-text h2 span {
+            font-family: 'Lato', sans-serif; /* Tipografía Lato solo para "SOMOS?" */
+            font-weight: 900; 
+            -webkit-text-stroke: 2px #3C9CBA; /* Solo bordes */
+            color: transparent;
+        }
+
+    .about-text p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        text-align: justify;
+        color: #3C9CBA;
+        margin-bottom: 1rem;
+    }
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .about-image {
+        max-width: 45%; /* Reduce proporción */
+    }
+
+    .about-text {
+        max-width: 55%; /* Más espacio para texto */
+        padding: 1.5rem;
+    }
+
+        .about-text h2 {
+            font-size: 3rem; /* Ajusta tamaño del título */
+        }
+
+        .about-text p {
+            font-size: 1rem;
+        }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        position: static; /* Cambia a posición estándar */
+        max-width: 80%; /* Imagen más grande en pantallas pequeñas */
+        margin-bottom: 1rem;
+    }
+
+    .about-text {
+        max-width: 90%; /* Usa casi toda la pantalla */
+        text-align: center; /* Centra el texto */
+        padding: 1rem;
+    }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+        }
+}
+
+@media (max-width: 480px) {
+    .about-image {
+        max-width: 100%; /* Usa toda la pantalla */
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+    }
 }

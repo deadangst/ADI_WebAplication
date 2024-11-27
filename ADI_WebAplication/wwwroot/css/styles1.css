@@ -1,0 +1,84 @@
+﻿/* Reset de Márgenes y Paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo de la Línea Superior */
+.top-line {
+    background: url('/img/linea.png') no-repeat center;
+    height: 5px;
+    width: 100%;
+}
+
+/* Contenedor del Header */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: url('/img/Rectangle 9551.png') no-repeat center/cover;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+    .nav-links li {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        transition: color 0.3s;
+    }
+
+        .nav-links a:hover {
+            color: #0056b3;
+        }
+
+/* Hero Section */
+.main-header-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 50px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Hero Content */
+.hero-content {
+    max-width: 50%;
+}
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .hero-content img {
+        max-width: 100%;
+        height: auto;
+    }
