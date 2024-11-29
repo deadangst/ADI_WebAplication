@@ -19,4 +19,8 @@
     <None Remove="wwwroot\img\testimonios\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\Ya Danza\" />
+  </ItemGroup>
+
 </Project>
