@@ -20,7 +20,7 @@
         updateCarousel();
     });
 
-    // Auto-advance every 3 seconds
+    // Auto-advance every 5 seconds
     setInterval(() => {
         currentIndex = (currentIndex + 1) % slides.length;
         updateCarousel();

@@ -483,7 +483,7 @@ footer {
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     color: #fff;
     overflow: hidden; /* Oculta cualquier contenido que sobresalga */
-    margin-bottom: 2rem; /* Reduce el espacio al final de la sección */
+    margin-bottom: 0; /* Reduce el espacio al final de la sección */
 }
 
 /* Team Content */
@@ -516,15 +516,15 @@ footer {
     .team-section {
         background-size: contain; /* Mantiene la imagen contenida */
         background-position: top center; /* Asegura que el enfoque esté en la parte superior */
-        height: 70vh; /* Ajusta la altura relativa */
-        margin-bottom: 0.5rem; /* Reduce más el espacio en pantallas pequeñas */
+        height: 60vh; /* Ajusta la altura relativa */
+        margin-bottom: 0; /* Reduce más el espacio en pantallas pequeñas */
     }
 
     .team-content {
         color: #3C9CBA; /* Cambia el color del texto */
         width: 90%; /* Usa casi toda la pantalla */
         padding: 0 1rem; /* Añade padding para evitar que el texto toque los bordes */
-        top: 50%; /* Ajusta la posición para pantallas pequeñas */
+        top: 65%; /* Ajusta la posición para pantallas pequeñas */
     }
 
         .team-content h2 {
@@ -534,6 +534,8 @@ footer {
         .team-content p {
             font-size: 0.9rem;
             line-height: 1.5; /* Reduce el espacio entre líneas */
+            text-align: left; /* Asegura que el texto esté alineado */
+            padding: 1rem; /* Ajusta el espacio interno */
         }
 }
 
@@ -541,36 +543,34 @@ footer {
 .cuerpos-libres-banner {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ocupa toda la altura visible */
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fff; /* Fondo opcional */
-    margin-top: 1rem; /* Reduce el espacio superior */
-    margin-bottom: 1.5rem; /* Reduce el espacio inferior */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Asegura que no haya padding extra */
+    height: auto; /* Ajusta la altura según el contenido */
 }
 
     .cuerpos-libres-banner img {
         max-width: 100%;
-        max-height: 100%;
-        object-fit: contain; /* Asegura que la imagen sea completamente visible */
+        height: auto; /* Permite que la altura se ajuste a las proporciones de la imagen */
+        object-fit: contain; /* Asegura que toda la imagen sea visible sin recortes */
+        display: block; /* Elimina posibles espacios blancos adicionales */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
     }
 
 /* Responsivo para tablets */
 @media (max-width: 768px) {
     .cuerpos-libres-banner {
-        height: 80vh; /* Reduce la altura en tablets */
-        margin-top: 0.5rem; /* Ajuste del espacio superior */
-        margin-bottom: 1rem; /* Ajuste del espacio inferior */
+        margin: 0; /* Asegura que no haya márgenes */
     }
 }
 
 /* Responsivo para smartphones */
 @media (max-width: 480px) {
     .cuerpos-libres-banner {
-        height: 60vh; /* Reduce aún más la altura */
-        margin-top: 0.5rem; /* Ajuste mínimo del espacio superior */
-        margin-bottom: 0.5rem; /* Ajuste mínimo del espacio inferior */
+        margin: 0; /* Asegura que no haya márgenes */
     }
 }
 
@@ -582,6 +582,7 @@ footer {
     align-items: center;
     padding: 4rem 5%;
     background-color: #fff;
+    margin-top: 0; /* Elimina margen superior */
 }
 
 .carousel-container {
@@ -696,7 +697,366 @@ footer {
         font-size: 2.5rem;
     }
 
-    .carousel-danza-text p {
+        .carousel-danza-text p {
+            font-size: 0.9rem;
+            max-width: 100%; /* Ajusta el ancho máximo */
+            margin: 0 auto; /* Centra el texto horizontalmente */
+            text-align: left; /* Asegura que el texto esté alineado */
+            padding: 1rem; /* Ajusta el espacio interno */
+        }
+}
+
+/* Sección Actividades */
+.activities {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #fff;
+}
+
+.activities-header h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #3C9CBA;
+}
+
+.activities-header h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #3C9CBA;
+}
+
+/* Contenedor de Tarjetas */
+.activities-content {
+    display: flex;
+    justify-content: center; /* Asegura el centrado del conjunto */
+    flex-wrap: wrap;
+    gap: 1rem; /* Controla el espacio entre tarjetas */
+    padding: 2rem 1rem;
+}
+
+/* Tarjetas */
+.card {
+    position: relative;
+    flex: 1 1 calc(25% - 1rem); /* Ajusta dinámicamente para 4 tarjetas por fila */
+    aspect-ratio: 391 / 541; /* Mantiene las proporciones del fondo */
+    border-radius: 0px;
+    overflow: hidden;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ajusta contenido al inicio */
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Tarjeta azul */
+.blue-card {
+    background: url('/img/tarjeta azul.png') no-repeat center/cover;
+    color: #fff;
+}
+
+/* Tarjetas blancas */
+.white-card {
+    background: url('/img/tarjeta blanca.png') no-repeat center/cover;
+    color: #3C9CBA;
+}
+
+/* Contenido dentro de las tarjetas */
+.card h4 {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Tamaño dinámico con rango */
+    margin-top: 1rem; /* Separación del borde superior */
+    margin-bottom: 0.5rem; /* Separación del párrafo */
+    text-align: center;
+}
+
+.card p {
+    font-size: clamp(0.6rem, 1vw, 0.9rem); /* Tamaño dinámico con rango */
+    line-height: 1.5;
+    margin: 25px; /* Sin margen adicional */
+    padding: 0 1rem; /* Controla el espacio interno */
+    text-align: justify; /* Texto justificado */
+    overflow: hidden; /* Evita desbordes */
+}
+
+/* Imágenes dentro de las tarjetas */
+.card img {
+    position: absolute;
+    bottom: 0; /* Alinea al borde inferior */
+    width: 80%; /* Asegura que la imagen ocupe todo el ancho */
+    height: auto; /* Mantiene las proporciones */
+    object-fit: contain; /* Ajusta el tamaño al contenedor */
+    z-index: 1;
+}
+
+/* Botones de Reportajes */
+.report-buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center; /* Centra los botones */
+}
+
+    .report-buttons button {
+        background: #fff;
+        color: #3C9CBA;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        padding: 0.5rem 1rem; /* Espaciado interno del botón */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+        cursor: pointer;
+        width: auto; /* Ajusta el ancho dinámicamente según el contenido */
+        text-align: center; 
+    }
+
+        .report-buttons button:hover {
+            background: #3C9CBA;
+            color: #fff;
+        }
+
+/* URLs de Reportajes */
+.report-links {
+    margin-top: 0.5rem; /* Espaciado superior */
+    display: none; /* Ocultos por defecto */
+}
+
+    .report-links a {
+        display: block; /* Cada URL en una línea separada */
+        font-family: 'Montserrat', sans-serif;
         font-size: 1rem;
+        color: #3C9CBA;
+        text-decoration: none;
+        margin-left: 1rem; /* Espaciado hacia la derecha de los botones */
+    }
+
+        .report-links a:hover {
+            text-decoration: underline;
+        }
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .activities-content {
+        gap: 1rem;
+    }
+    activities-header h2 {
+        font-size: 3rem; /* Reduce tamaño de los títulos */
+    }
+
+    activities-header h3 {
+        font-size: 2rem; /* Reduce tamaño del texto */
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 1rem); /* Dos tarjetas por fila en pantallas medianas */
+    }
+        .card img {
+            display: none; /* Oculta las imágenes en pantallas medianas y pequeñas */
+        }
+
+        .card h4 {
+            font-size: 1rem;            
+        }
+
+        .card p {
+            font-size: 0.8rem;            
+        }
+
+    .report-buttons button {
+        width: 100%; /* Ajusta a pantalla mediana */
+    }
+}
+
+@media (max-width: 480px) {
+    activities-header h2 {
+        font-size: 0.9rem;
+    }
+
+    activities-header h3 {
+        font-size: 0.7rem;
+    }
+    .card {
+        flex: 1 1 calc(100% - 1rem); /* Una tarjeta por fila en pantallas pequeñas */
+    }
+
+        .card img {
+            display: none; /* Oculta las imágenes en pantallas medianas y pequeñas */
+        }
+    .report-buttons button {
+        width: 100%; /* Ajusta a pantalla pequeña */
+    }
+}
+
+/* Sección Logros */
+.logros-section {
+    text-align: center;
+    padding: 2rem 0rem;
+    background-color: #fff;
+    margin-left: 0; /* Elimina cualquier margen externo */
+    margin-right: 100px;
+}
+
+.logros-header h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #3C9CBA;
+    margin-bottom: 2rem;
+}
+
+/* Carrusel */
+.logros-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%; /* Cambiado para ocupar todo el ancho */
+    margin: 0; /* Elimina cualquier margen externo */
+    padding: 0; /* Elimina cualquier padding */
+}
+
+.logros-carousel-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 100%; /* Asegura que se extienda completamente */
+    padding: 0; /* Elimina padding interno */
+    margin: 0; /* Asegura que no haya desplazamiento por márgenes */
+}
+
+/* Slides */
+.logros-slide {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Lado Izquierdo (Imágenes) */
+.logros-left {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+    .logros-left img {
+        height: 100%; /* Asegura altura consistente */
+        object-fit: contain;
+    }
+
+.logros-lineas {
+    width: 50%; /* Asegura que ocupe el 95% del lado izquierdo */
+    left: 0;
+}
+
+.logros-image {
+    position: absolute;
+    right: 5%; /* Superposición */
+    width: 55%; /* Aumenta el tamaño de la imagen */
+    height: auto;
+    z-index: 2;
+}
+
+/* Lado Derecho (Texto) */
+.logros-right {
+    flex: 1; /* Ocupa 50% del espacio */
+    padding: 2rem;
+    text-align: center;
+    color: #3C9CBA;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    .logros-right h4 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #3C9CBA;
+        margin-bottom: 1rem;
+    }
+
+    .logros-right p {
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.8;
+        color: #3C9CBA;
+        text-align: justify;
+        margin: 20px auto;
+        max-width: 80%;
+    }
+
+/* Botón Controlador */
+.logros-control-next {
+    position: absolute;
+    right: -50px; /* Ubicación a la derecha de la sección */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3C9CBA;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+    .logros-control-next:hover {
+        color: #0056b3;
+    }
+
+/* Indicadores (Opcional) */
+.logros-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+    .logros-indicators button {
+        width: 10px;
+        height: 10px;
+        background-color: #ccc;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+        .logros-indicators button.active {
+            background-color: #3C9CBA;
+        }
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .logros-right h4 {
+        font-size: 1.5rem;
+    }
+
+    .logros-right p {
+        font-size: 0.9rem;
+    }
+
+    .logros-control-next {
+        right: -30px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logros-right h4 {
+        font-size: 1.2rem;
+    }
+
+    .logros-right p {
+        font-size: 0.8rem;
+    }
+
+    .logros-control-next {
+        right: -20px;
+        font-size: 1.2rem;
     }
 }
