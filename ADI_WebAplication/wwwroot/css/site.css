@@ -124,16 +124,17 @@ header {
     .hero-content h1 {
         font-size: 1rem !important;
     }
+
     .hero-content h2 {
-        font-size: 2rem !important; 
+        font-size: 2rem !important;
     }
 
         .hero-content h2.text-outline {
-            font-size: 2rem !important; 
+            font-size: 2rem !important;
         }
 
     .hero-content p {
-        font-size: 0.9rem !important; 
+        font-size: 0.9rem !important;
     }
 }
 
@@ -274,7 +275,7 @@ footer {
     left: 0;
     height: auto;
     max-height: calc(100%); /* Calcula altura relativa a Hero */
-    max-width: 72%; 
+    max-width: 72%;
     object-fit: cover; /* Mantiene proporciones sin deformar */
     z-index: 2;
 }
@@ -298,7 +299,7 @@ footer {
 
         .about-text h2 span {
             font-family: 'Lato', sans-serif; /* Tipografía Lato solo para "SOMOS?" */
-            font-weight: 900; 
+            font-weight: 900;
             -webkit-text-stroke: 2px #3C9CBA; /* Solo bordes */
             color: transparent;
         }
@@ -404,7 +405,7 @@ footer {
 }
 
 .mission-icon {
-    max-width: 26%; 
+    max-width: 26%;
     height: auto;
     margin-bottom: 1rem; /* Espaciado debajo de la imagen */
 }
@@ -697,13 +698,13 @@ footer {
         font-size: 2.5rem;
     }
 
-        .carousel-danza-text p {
-            font-size: 0.9rem;
-            max-width: 100%; /* Ajusta el ancho máximo */
-            margin: 0 auto; /* Centra el texto horizontalmente */
-            text-align: left; /* Asegura que el texto esté alineado */
-            padding: 1rem; /* Ajusta el espacio interno */
-        }
+    .carousel-danza-text p {
+        font-size: 0.9rem;
+        max-width: 100%; /* Ajusta el ancho máximo */
+        margin: 0 auto; /* Centra el texto horizontalmente */
+        text-align: left; /* Asegura que el texto esté alineado */
+        padding: 1rem; /* Ajusta el espacio interno */
+    }
 }
 
 /* Sección Actividades */
@@ -813,7 +814,7 @@ footer {
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra del botón */
         cursor: pointer;
         width: auto; /* Ajusta el ancho dinámicamente según el contenido */
-        text-align: center; 
+        text-align: center;
     }
 
         .report-buttons button:hover {
@@ -845,6 +846,7 @@ footer {
     .activities-content {
         gap: 1rem;
     }
+
     activities-header h2 {
         font-size: 3rem; /* Reduce tamaño de los títulos */
     }
@@ -856,16 +858,17 @@ footer {
     .card {
         flex: 1 1 calc(50% - 1rem); /* Dos tarjetas por fila en pantallas medianas */
     }
+
         .card img {
             display: none; /* Oculta las imágenes en pantallas medianas y pequeñas */
         }
 
         .card h4 {
-            font-size: 1rem;            
+            font-size: 1rem;
         }
 
         .card p {
-            font-size: 0.8rem;            
+            font-size: 0.8rem;
         }
 
     .report-buttons button {
@@ -881,6 +884,7 @@ footer {
     activities-header h3 {
         font-size: 0.7rem;
     }
+
     .card {
         flex: 1 1 calc(100% - 1rem); /* Una tarjeta por fila en pantallas pequeñas */
     }
@@ -888,6 +892,7 @@ footer {
         .card img {
             display: none; /* Oculta las imágenes en pantallas medianas y pequeñas */
         }
+
     .report-buttons button {
         width: 100%; /* Ajusta a pantalla pequeña */
     }
@@ -899,7 +904,8 @@ footer {
     padding: 2rem 0rem;
     background-color: #fff;
     margin-left: 0; /* Elimina cualquier margen externo */
-    margin-right: 100px;
+    margin-right: auto;
+    min-height: 65vh; /* Garantiza que ocupe al menos toda la altura de la ventana */
 }
 
 .logros-header h2 {
@@ -934,9 +940,13 @@ footer {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex: 0 0 100%;
+    width: 100%;
     transition: transform 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
+
 
 /* Lado Izquierdo (Imágenes) */
 .logros-left {
@@ -979,6 +989,7 @@ footer {
         font-weight: bold;
         color: #3C9CBA;
         margin-bottom: 1rem;
+        padding-right: 20rem;
     }
 
     .logros-right p {
@@ -989,20 +1000,23 @@ footer {
         text-align: justify;
         margin: 20px auto;
         max-width: 80%;
+        padding-right: 20rem;
     }
 
 /* Botón Controlador */
 .logros-control-next {
     position: absolute;
-    right: -50px; /* Ubicación a la derecha de la sección */
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
+    right: 200px; /* Más cercano al contenido */
+    top: 200px;
+    transform: translate(-50%, -50%);
+    font-size: 4rem; /* Incrementa el tamaño un 30% */
     font-weight: bold;
     color: #3C9CBA;
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0.5rem 1rem; /* Añade espacio interno */
+    z-index: 10; /* Asegura que el botón esté por encima de otros elementos */
 }
 
     .logros-control-next:hover {
@@ -1059,4 +1073,15 @@ footer {
         right: -20px;
         font-size: 1.2rem;
     }
+}
+
+
+footer {
+    position: relative; /* Asegura que el footer esté dentro del flujo */
+    width: 100%;
+    text-align: center;
+    background-color: #3C9CBA;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 2rem; /* Espacio entre el contenido y el footer */
 }

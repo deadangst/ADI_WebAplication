@@ -1,16 +1,31 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('.logros-carousel-inner');
-    const slides = document.querySelectorAll('.logros-slide');
-    const nextButton = document.querySelector('.logros-control-next');
+﻿document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".logros-slide");
+    const nextButton = document.querySelector(".logros-control-next");
+    const indicators = document.querySelectorAll(".logros-indicators button");
+
     let currentIndex = 0;
 
-    function updateCarousel() {
-        const offset = -currentIndex * 100;
-        carousel.style.transform = `translateX(${offset}%)`;
-    }
+    const updateCarousel = (index) => {
+        slides.forEach((slide, i) => {
+            slide.style.transform = `translateX(${(i - index) * 100}%)`;
+        });
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle("active", i === index);
+        });
+    };
 
-    nextButton.addEventListener('click', () => {
+    nextButton.addEventListener("click", () => {
         currentIndex = (currentIndex + 1) % slides.length;
-        updateCarousel();
+        updateCarousel(currentIndex);
     });
+
+    indicators.forEach((indicator, i) => {
+        indicator.addEventListener("click", () => {
+            currentIndex = i;
+            updateCarousel(currentIndex);
+        });
+    });
+
+    // Initialize carousel
+    updateCarousel(currentIndex);
 });
