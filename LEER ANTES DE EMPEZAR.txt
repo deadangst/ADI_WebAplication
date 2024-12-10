@@ -1,0 +1,33 @@
+Resumen del Proyecto: Asociación Desampa Inclusivo
+
+El proyecto Asociación Desampa Inclusivo es un sitio web dinámico e inclusivo diseñado para promover la participación de personas con discapacidad en la sociedad mediante actividades, eventos, y espacios culturales. Está construido utilizando el patrón arquitectónico Model-View-Controller (MVC) en ASP.NET Core, lo que permite una clara separación de responsabilidades, escalabilidad y un desarrollo modular eficiente.
+
+Características Principales:
+Estructura MVC:
+
+Modelos: Representan los datos y su lógica de negocio.
+Vistas: Manejan la presentación del contenido al usuario.
+Controladores: Gestionan la interacción entre usuarios, modelos y vistas.
+Contenido Incluido:
+
+Home (Index): Presenta la visión, misión y actividades principales de la asociación.
+Emprendimientos: Fomenta el desarrollo de proyectos empresariales inclusivos.
+Videos Tutoriales: Provee contenido educativo y recursos para la comunidad.
+Ya! Danza: Detalla la iniciativa de danza inclusiva y sus logros.
+Deportes Adaptados: Promueve la actividad física para personas con y sin discapacidad.
+Contacto: Facilita la comunicación con la asociación.
+Motivación del Proyecto:
+Este sitio web busca educar sobre el modelo social de la discapacidad y trabajar con actores sociales para garantizar la accesibilidad universal, promoviendo la participación inclusiva en todo el país.
+
+Migración a HTML:
+El sitio utiliza HTML en lugar de tecnologías como PHP para aprovechar las ventajas de ASP.NET MVC, incluyendo una integración más sencilla con bases de datos, lógica backend robusta y herramientas de desarrollo modernas.
+
+Responsividad y Accesibilidad:
+Diseñado para ser completamente responsivo, el sitio se adapta a dispositivos móviles, tablets y pantallas grandes, garantizando una experiencia de usuario inclusiva y accesible.
+
+Archivos Relacionados:
+Views: Contiene las vistas correspondientes a cada sección del sitio.
+Controllers: Define las rutas y lógica para cada sección.
+wwwroot: Incluye recursos estáticos como imágenes, scripts y estilos CSS.
+Este documento describe la base técnica del proyecto y puede servir como referencia para agregar nuevas secciones o funcionalidades futuras.
+
