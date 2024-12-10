@@ -963,7 +963,7 @@ footer {
     }
 
 .logros-lineas {
-    width: 50%; /* Asegura que ocupe el 95% del lado izquierdo */
+    width: 50%; 
     left: 0;
 }
 
@@ -1044,34 +1044,355 @@ footer {
             background-color: #3C9CBA;
         }
 
-/* Responsivo */
+/* Ajustes Responsivos */
 @media (max-width: 768px) {
+    .logros-carousel {
+        flex-direction: column; /* Cambia a disposición vertical */
+        align-items: center; /* Centra el contenido */
+    }
+
+    .logros-left,
+    .logros-right {
+        flex: none; /* Elimina el ancho proporcional */
+        width: 90%; /* Asegura que ocupe casi todo el ancho */
+        margin: 0 auto; /* Centra horizontalmente */
+        text-align: center; /* Centra el texto */
+    }
+
+    .logros-lineas {
+        width: 80%; /* Reduce el ancho */
+    }
+
+    .logros-image {
+        width: 100%; /* Ajusta la imagen al ancho disponible */
+        position: static; /* Cambia a disposición estándar */
+        margin-bottom: 1rem; /* Añade espacio entre imagen y texto */
+    }
+
     .logros-right h4 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Reduce tamaño del título */
+        padding-right: 0; /* Elimina padding extra */
     }
 
     .logros-right p {
-        font-size: 0.9rem;
+        font-size: 1rem; /* Reduce tamaño del texto */
+        padding-right: 0; /* Elimina padding extra */
+        max-width: 100%; /* Ocupa todo el ancho disponible */
     }
 
     .logros-control-next {
-        right: -30px;
-        font-size: 1.5rem;
+        right: 10px; /* Ajusta posición del botón */
+        top: 90%; /* Cambia la posición vertical */
+        font-size: 3rem; /* Reduce tamaño del botón */
     }
 }
 
 @media (max-width: 480px) {
-    .logros-right h4 {
-        font-size: 1.2rem;
+    .logros-carousel {
+        flex-direction: column; /* Coloca las imágenes y el texto en disposición vertical */
+        max-width: 100%; /* Ocupa toda la pantalla */
+        height: auto; /* Ajusta la altura automáticamente */
+        margin: 0 auto; /* Centra el carrusel */
     }
 
-    .logros-right p {
-        font-size: 0.8rem;
+    .logros-header h2 {
+        font-size: 1.5rem;
     }
+
+    .logros-left {
+        padding: 0;
+        margin-bottom: 30rem; /* Añade espacio debajo de las imágenes */        
+    }
+
+    .logros-lineas {
+        width: 50%;
+        left: 0;
+    }
+
+    .logros-image {
+        position: absolute;
+        right: 5%; /* Superposición */
+        width: 55%; /* Aumenta el tamaño de la imagen */
+        height: auto;
+        z-index: 2;
+    }
+
+    .logros-right {
+        padding: 1rem; /* Elimina cualquier padding que cause desplazamiento */
+        text-align: center;
+        margin-left: -400px; 
+        
+    }
+        .logros-right h4 {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .logros-right p {
+
+            font-size: 0.9rem;
+            margin: 0 auto;
+            text-align: justify;
+        }
 
     .logros-control-next {
-        right: -20px;
-        font-size: 1.2rem;
+        font-size: 2.5rem;
+        right: -1.5rem;
+        top: 100px; /* Ajusta la posición para móviles */
+    }
+}
+
+/* Apoyarnos Section */
+.apoyarnos-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem 5%; /* Espaciado alrededor */
+    background-color: #fff;
+}
+
+.apoyarnos-left, .apoyarnos-right {
+    flex: 1; /* División equitativa del espacio */
+    text-align: center;
+    padding: 1rem; /* Espaciado interno */
+    color: #3C9CBA;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    .apoyarnos-left img, .apoyarnos-right img {
+        max-width: 30%; /* Tamaño proporcional a la sección */
+        height: auto;
+        margin-bottom: 1rem; /* Espaciado debajo de la imagen */
+    }
+
+    .apoyarnos-left h2, .apoyarnos-right h2 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 1rem; /* Espaciado debajo del título */
+    }
+
+    .apoyarnos-left p, .apoyarnos-right p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.8;
+        text-align: justify;
+        margin: 0 auto; /* Centra el párrafo dentro de su división */
+        max-width: 80%; /* Limita el ancho del texto */
+    }
+
+/* Botones */
+.apoyarnos-button {
+    background: #fff;
+    color: #3C9CBA;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem; /* Espaciado interno del botón */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+    cursor: pointer;
+    margin-top: 1rem; /* Espaciado superior */
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+    .apoyarnos-button:hover {
+        background: #3C9CBA;
+        color: #fff;
+    }
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+    .apoyarnos-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apoyarnos-left, .apoyarnos-right {
+        max-width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+        padding: 1rem 0;
+    }
+
+        .apoyarnos-left img, .apoyarnos-right img {
+            max-width: 50%; /* Imagen más grande en pantallas pequeñas */
+        }
+
+        .apoyarnos-left p, .apoyarnos-right p {
+            font-size: 1.2rem; /* Reduce tamaño del texto */
+        }
+}
+
+@media (max-width: 480px) {
+    .apoyarnos-left img, .apoyarnos-right img {
+        max-width: 80%; /* Ajusta proporcionalmente para pantallas muy pequeñas */
+    }
+
+    .apoyarnos-left p, .apoyarnos-right p {
+        font-size: 1rem;
+    }
+}
+
+/* Sección Ubicación */
+.ubicacion-section {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 2rem 5%;
+    height: 700px; /* Mantén la altura total si el contenido lo requiere */
+    background: none; /* Elimina el fondo de la sección principal */
+}
+
+.ubicacion-background {
+    position: absolute;
+    top: 50%; /* Centra el fondo verticalmente */
+    left: 0;
+    width: 100%;
+    height: 400px; /* Altura reducida del fondo */
+    background: url('/img/Rectangle 9551.png') no-repeat center center;
+    background-size: cover;
+    transform: translateY(-50%);
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+}
+
+.ubicacion-mapa-container {
+    position: relative;
+    width: 40%;  
+    height: 0;
+    left: -200px;
+    padding-top: 30%;  
+    overflow: hidden;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destacar el mapa */
+    transform: translateX(20%); /* Desplaza el mapa hacia la derecha */
+}
+
+.ubicacion-mapa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Asegura que ocupe el contenedor */
+    border: none;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .ubicacion-section {
+        height: 500px; /* Ajusta la altura */
+    }
+
+    .ubicacion-mapa-container {
+        width: 90%; /* Más espacio para pantallas medianas */
+        padding-top: 90%; /* Relación de aspecto cuadrada */
+        transform: translateX(10%); /* Reduce el desplazamiento a la derecha */
+    }
+}
+
+@media (max-width: 480px) {
+    .ubicacion-section {
+        height: 400px; /* Altura más baja en pantallas pequeñas */
+        padding: 1rem;
+        justify-content: center; /* Centra el contenido */
+    }
+
+    .ubicacion-background {
+        height: 200px; /* Reduce el tamaño del fondo */
+        top: 60%; /* Ajusta el fondo verticalmente */
+        transform: translateY(-60%);
+    }
+
+    .ubicacion-mapa-container {
+        width: 90%; /* Ocupa casi todo el ancho */
+        padding-top: 90%; /* Relación de aspecto cuadrada */
+        left: 0; /* Centra horizontalmente */
+        transform: translateX(0); /* Elimina el desplazamiento */
+        border-radius: 10px; /* Bordes menos redondeados */
+    }
+}
+
+/* Sección Redes Sociales */
+.redes-sociales-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 5%;
+    background-color: #fff;
+}
+
+.redes-sociales-content {
+    flex: 1; 
+    align-items: center;
+    text-align: left;
+    padding: 3rem;
+    color: #3C9CBA;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    .redes-sociales-content h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+.redes-sociales-icons {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem; 
+}
+
+.red-social-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+    .red-social-icon:hover {
+        transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    }
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .redes-sociales-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes-sociales-content {
+        padding: 2rem;
+    }
+
+        .redes-sociales-content h2 {
+            font-size: 3rem; /* Ajusta tamaño del título */
+        }
+
+    .redes-sociales-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem; /* Más espacio entre íconos */
+    }
+
+    .red-social-icon {
+        width: 60px; /* Reduce tamaño en pantallas medianas */
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .redes-sociales-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .red-social-icon {
+        width: 50px; /* Reduce tamaño en pantallas pequeñas */
+        height: 50px;
     }
 }
 
@@ -1085,3 +1406,4 @@ footer {
     padding: 1rem;
     margin-top: 2rem; /* Espacio entre el contenido y el footer */
 }
+
