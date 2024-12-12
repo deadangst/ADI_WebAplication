@@ -17,7 +17,7 @@
                 <ul class="nav-links">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
                     <li><a href="#">Emprendimientos</a></li>
-                    <li><a href="#">Videos Tutoriales </a></li>
+                    <li><a href="#">Videos Tutoriales</a></li>
                     <li><a href="#">Ya! Danza</a></li>
                     <li><a href="#">Deportes Adaptados</a></li>
                     <li><a href="#">Contacto</a></li>
@@ -31,6 +31,22 @@
     <footer>
         <p>&copy; 2024 - ADI</p>
     </footer>
+
+    <!-- Implementación del widget de accesibilidad -->
+    <script>
+        // Script Inline Provisional
+        (function (d) {
+            var s = d.createElement("script");
+            s.setAttribute("data-account", "laLG20Sv3q");
+            s.setAttribute("src", "https://cdn.userway.org/widget.js");
+            (d.body || d.head).appendChild(s);
+        })(document)
+    </script>
+    <noscript>
+        Please ensure Javascript is enabled for purposes of
+        <a href="https://userway.org">website accessibility</a>
+    </noscript>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
